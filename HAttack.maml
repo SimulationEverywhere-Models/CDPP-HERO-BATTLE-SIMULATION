@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <Top>
+    <components> HAttack@HAttack&#xd;</components>
+    <out> out &#xd;</out>
+    <in> in &#xd;</in>
+  </Top>
+  <HAttack/>
+</CDPlusPlus_Builder_Version_1.0.0>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <Top>
+    <components> Hero &#xd;</components>
+    <out> heroOut creepOut resultOut &#xd;</out>
+    <in> creepIn heroIn&#xd;</in>
+    <Link> creepIn creepIn@Hero&#xd;</Link>
+    <Link> heroIn heroIn@Hero&#xd;</Link>
+    <Link> heroOut@Hero heroOut&#xd;</Link>
+    <Link> creepOut@Hero creepOut&#xd;</Link>
+    <Link> resultOut@Hero resultOut&#xd;</Link>
+  </Top>
+  <Hero>
+    <components> HDecision@HDecision HAttack@HAttack&#xd;</components>
+    <out> creepOut heroOut resultOut &#xd;</out>
+    <in> heroIn creepIn &#xd;</in>
+    <Link> attackOut@HDecision in@HAttack&#xd;</Link>
+    <Link> creepOut@HAttack creepOut&#xd;</Link>
+    <Link> heroOut@HAttack heroOut&#xd;</Link>
+    <Link> resultOut@HAttack resultOut&#xd;</Link>
+    <Link> heroIn heroIn@HDecision&#xd;</Link>
+    <Link> creepIn creepIn@HDecision&#xd;</Link>
+  </Hero>
+  <HDecision/>
+  <HAttack/>
+</CDPlusPlus_Builder_Version_1.0.0>

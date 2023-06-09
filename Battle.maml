@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <Top>
+    <components> Hero EnemyHero Creep EnemyCreep &#xd;</components>
+    <out> resultOut &#xd;</out>
+    <in> in &#xd;</in>
+    <Link> heroOut@Hero heroIn@EnemyHero&#xd;</Link>
+    <Link> creepOut@Hero heroIn@EnemyCreep&#xd;</Link>
+    <Link> heroOut@EnemyHero heroIn@Hero&#xd;</Link>
+    <Link> creepOut@EnemyHero heroIn@Creep&#xd;</Link>
+    <Link> heroOut@Creep creepIn@EnemyHero&#xd;</Link>
+    <Link> creepOut@Creep creepIn@EnemyCreep&#xd;</Link>
+    <Link> heroOut@EnemyCreep creepIn@Hero&#xd;</Link>
+    <Link> creepOut@EnemyCreep creepIn@Creep&#xd;</Link>
+    <Link> in creepIn@Hero&#xd;</Link>
+    <Link> resultOut@Hero resultOut&#xd;</Link>
+  </Top>
+  <Hero>
+    <components> HDecision@HDecision HAttack@HAttack &#xd;</components>
+    <out> creepOut heroOut resultOut &#xd;</out>
+    <in> heroIn creepIn &#xd;</in>
+    <Link> attackOut@HDecision in@HAttack&#xd;</Link>
+    <Link> creepOut@HAttack creepOut&#xd;</Link>
+    <Link> heroOut@HAttack heroOut&#xd;</Link>
+    <Link> resultOut@HAttack resultOut&#xd;</Link>
+    <Link> heroIn heroIn@HDecision&#xd;</Link>
+    <Link> creepIn creepIn@HDecision&#xd;</Link>
+  </Hero>
+  <HDecision/>
+  <HAttack/>
+  <EnemyHero>
+    <components> EHDecision@HDecision EHAttack@HAttack &#xd;</components>
+    <out> creepOut heroOut resultOut &#xd;</out>
+    <in> heroIn creepIn &#xd;</in>
+    <Link> attackOut@EHDecision in@EHAttack&#xd;</Link>
+    <Link> creepOut@EHAttack creepOut&#xd;</Link>
+    <Link> heroOut@EHAttack heroOut&#xd;</Link>
+    <Link> resultOut@EHAttack resultOut&#xd;</Link>
+    <Link> heroIn heroIn@EHDecision&#xd;</Link>
+    <Link> creepIn creepIn@EHDecision&#xd;</Link>
+  </EnemyHero>
+  <HDecision/>
+  <HAttack/>
+  <Creep>
+    <components> Creep1@CreepModel&#xd;</components>
+    <out> creepOut heroOut &#xd;</out>
+    <in> creepIn heroIn &#xd;</in>
+    <Link> heroOut@Creep1 heroOut&#xd;</Link>
+    <Link> creepOut@Creep1 creepOut&#xd;</Link>
+    <Link> creepIn creepIn@Creep1&#xd;</Link>
+    <Link> heroIn heroIn@Creep1&#xd;</Link>
+  </Creep>
+  <CreepModel/>
+  <EnemyCreep>
+    <components> Creep2@CreepModel &#xd;</components>
+    <out> creepOut heroOut &#xd;</out>
+    <in> creepIn heroIn &#xd;</in>
+    <Link> heroOut@Creep2 heroOut&#xd;</Link>
+    <Link> creepOut@Creep2 creepOut&#xd;</Link>
+    <Link> creepIn creepIn@Creep2&#xd;</Link>
+    <Link> heroIn heroIn@Creep2&#xd;</Link>
+  </EnemyCreep>
+  <CreepModel/>
+</CDPlusPlus_Builder_Version_1.0.0>

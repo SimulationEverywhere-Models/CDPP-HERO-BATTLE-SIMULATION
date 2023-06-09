@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_DPTGoFTLEeS0wYpMnW48Og" defined="true" sourceFileRelativePath="Hero.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_DPTGoVTLEeS0wYpMnW48Og" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_DPTGwFTLEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_DPTGolTLEeS0wYpMnW48Og" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_DPTGwVTLEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_DPTGo1TLEeS0wYpMnW48Og" portName="resultOut" portType="OUTPUT_PORT" incomingLinks="_DPTGwlTLEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_DPTGpFTLEeS0wYpMnW48Og" portName="creepIn" outgoingLinks="_DPTGvlTLEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_DPTGpVTLEeS0wYpMnW48Og" portName="heroIn" outgoingLinks="_DPTGv1TLEeS0wYpMnW48Og"/>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_DPTGplTLEeS0wYpMnW48Og" instanceName="Hero">
+      <modelType xmi:type="CoupledModelType" xmi:id="_DPTGp1TLEeS0wYpMnW48Og" modelName="Hero">
+        <ports xmi:type="CoupledPort" xmi:id="_DPTGqFTLEeS0wYpMnW48Og" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_DPTGuVTLEeS0wYpMnW48Og" outgoingLinks="_DPTGwVTLEeS0wYpMnW48Og"/>
+        <ports xmi:type="CoupledPort" xmi:id="_DPTGqVTLEeS0wYpMnW48Og" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_DPTGulTLEeS0wYpMnW48Og" outgoingLinks="_DPTGwFTLEeS0wYpMnW48Og"/>
+        <ports xmi:type="CoupledPort" xmi:id="_DPTGqlTLEeS0wYpMnW48Og" portName="resultOut" portType="OUTPUT_PORT" incomingLinks="_DPTGu1TLEeS0wYpMnW48Og" outgoingLinks="_DPTGwlTLEeS0wYpMnW48Og"/>
+        <ports xmi:type="CoupledPort" xmi:id="_DPTGq1TLEeS0wYpMnW48Og" portName="heroIn" incomingLinks="_DPTGv1TLEeS0wYpMnW48Og" outgoingLinks="_DPTGvFTLEeS0wYpMnW48Og"/>
+        <ports xmi:type="CoupledPort" xmi:id="_DPTGrFTLEeS0wYpMnW48Og" portName="creepIn" incomingLinks="_DPTGvlTLEeS0wYpMnW48Og" outgoingLinks="_DPTGvVTLEeS0wYpMnW48Og"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_DPTGrVTLEeS0wYpMnW48Og" instanceName="HDecision">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_DPTGrlTLEeS0wYpMnW48Og" modelName="HDecision" defined="true" sourceFileRelativePath="HDecision.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_DPTGr1TLEeS0wYpMnW48Og" portName="creepIn" incomingLinks="_DPTGvVTLEeS0wYpMnW48Og"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_DPTGsFTLEeS0wYpMnW48Og" portName="heroIn" incomingLinks="_DPTGvFTLEeS0wYpMnW48Og"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_DPTGsVTLEeS0wYpMnW48Og" portName="attackOut" portType="OUTPUT_PORT" outgoingLinks="_DPTGuFTLEeS0wYpMnW48Og"/>
+          </modelType>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_DPTGslTLEeS0wYpMnW48Og" instanceName="HAttack">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_DPTGs1TLEeS0wYpMnW48Og" modelName="HAttack" defined="true" sourceFileRelativePath="HAttack.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_DPTGtFTLEeS0wYpMnW48Og" portName="in" incomingLinks="_DPTGuFTLEeS0wYpMnW48Og"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_DPTGtVTLEeS0wYpMnW48Og" portName="heroOut" portType="OUTPUT_PORT" outgoingLinks="_DPTGulTLEeS0wYpMnW48Og"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_DPTGtlTLEeS0wYpMnW48Og" portName="creepOut" portType="OUTPUT_PORT" outgoingLinks="_DPTGuVTLEeS0wYpMnW48Og"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_DPTGt1TLEeS0wYpMnW48Og" portName="resultOut" portType="OUTPUT_PORT" outgoingLinks="_DPTGu1TLEeS0wYpMnW48Og"/>
+          </modelType>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_DPTGuFTLEeS0wYpMnW48Og" target="_DPTGtFTLEeS0wYpMnW48Og" source="_DPTGsVTLEeS0wYpMnW48Og"/>
+        <links xmi:type="CoupledLink" xmi:id="_DPTGuVTLEeS0wYpMnW48Og" target="_DPTGqFTLEeS0wYpMnW48Og" source="_DPTGtlTLEeS0wYpMnW48Og"/>
+        <links xmi:type="CoupledLink" xmi:id="_DPTGulTLEeS0wYpMnW48Og" target="_DPTGqVTLEeS0wYpMnW48Og" source="_DPTGtVTLEeS0wYpMnW48Og"/>
+        <links xmi:type="CoupledLink" xmi:id="_DPTGu1TLEeS0wYpMnW48Og" target="_DPTGqlTLEeS0wYpMnW48Og" source="_DPTGt1TLEeS0wYpMnW48Og"/>
+        <links xmi:type="CoupledLink" xmi:id="_DPTGvFTLEeS0wYpMnW48Og" target="_DPTGsFTLEeS0wYpMnW48Og" source="_DPTGq1TLEeS0wYpMnW48Og"/>
+        <links xmi:type="CoupledLink" xmi:id="_DPTGvVTLEeS0wYpMnW48Og" target="_DPTGr1TLEeS0wYpMnW48Og" source="_DPTGrFTLEeS0wYpMnW48Og"/>
+      </modelType>
+    </coupledModels>
+    <links xmi:type="CoupledLink" xmi:id="_DPTGvlTLEeS0wYpMnW48Og" target="_DPTGrFTLEeS0wYpMnW48Og" source="_DPTGpFTLEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_DPTGv1TLEeS0wYpMnW48Og" target="_DPTGq1TLEeS0wYpMnW48Og" source="_DPTGpVTLEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_DPTGwFTLEeS0wYpMnW48Og" target="_DPTGoVTLEeS0wYpMnW48Og" source="_DPTGqVTLEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_DPTGwVTLEeS0wYpMnW48Og" target="_DPTGolTLEeS0wYpMnW48Og" source="_DPTGqFTLEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_DPTGwlTLEeS0wYpMnW48Og" target="_DPTGo1TLEeS0wYpMnW48Og" source="_DPTGqlTLEeS0wYpMnW48Og"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_DPTtsFTLEeS0wYpMnW48Og" type="DEVS" element="_DPTGoFTLEeS0wYpMnW48Og" name="Hero.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_DPTtsVTLEeS0wYpMnW48Og"/>
+  </notation:Diagram>
+</xmi:XMI>

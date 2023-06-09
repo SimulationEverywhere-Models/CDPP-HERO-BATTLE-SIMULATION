@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_p9p8EFTyEeS0wYpMnW48Og" defined="true" sourceFileRelativePath="CreepModel.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_p9p8EVTyEeS0wYpMnW48Og" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_p9p8HFTyEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_p9p8ElTyEeS0wYpMnW48Og" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_p9p8G1TyEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_p9p8E1TyEeS0wYpMnW48Og" portName="creepIn" outgoingLinks="_p9p8HVTyEeS0wYpMnW48Og"/>
+    <ports xmi:type="CoupledPort" xmi:id="_p9p8FFTyEeS0wYpMnW48Og" portName="heroIn" outgoingLinks="_p9p8HlTyEeS0wYpMnW48Og"/>
+    <atomicModels xmi:type="AtomicModelInstance" xmi:id="_p9p8FVTyEeS0wYpMnW48Og" instanceName="CreepModel">
+      <modelType xmi:type="CPPAtomicModelType" xmi:id="_p9p8FlTyEeS0wYpMnW48Og" modelName="CreepModel" defined="true" sourceFileRelativePath="CreepModel.cpp">
+        <ports xmi:type="InputAtomicPort" xmi:id="_p9p8F1TyEeS0wYpMnW48Og" portName="heroIn" incomingLinks="_p9p8HlTyEeS0wYpMnW48Og"/>
+        <ports xmi:type="InputAtomicPort" xmi:id="_p9p8GFTyEeS0wYpMnW48Og" portName="creepIn" incomingLinks="_p9p8HVTyEeS0wYpMnW48Og"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_p9p8GVTyEeS0wYpMnW48Og" portName="heroOut" portType="OUTPUT_PORT" outgoingLinks="_p9p8G1TyEeS0wYpMnW48Og"/>
+        <ports xmi:type="OutputAtomicPort" xmi:id="_p9p8GlTyEeS0wYpMnW48Og" portName="creepOut" portType="OUTPUT_PORT" outgoingLinks="_p9p8HFTyEeS0wYpMnW48Og"/>
+      </modelType>
+    </atomicModels>
+    <links xmi:type="CoupledLink" xmi:id="_p9p8G1TyEeS0wYpMnW48Og" target="_p9p8ElTyEeS0wYpMnW48Og" source="_p9p8GVTyEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_p9p8HFTyEeS0wYpMnW48Og" target="_p9p8EVTyEeS0wYpMnW48Og" source="_p9p8GlTyEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_p9p8HVTyEeS0wYpMnW48Og" target="_p9p8GFTyEeS0wYpMnW48Og" source="_p9p8E1TyEeS0wYpMnW48Og"/>
+    <links xmi:type="CoupledLink" xmi:id="_p9p8HlTyEeS0wYpMnW48Og" target="_p9p8F1TyEeS0wYpMnW48Og" source="_p9p8FFTyEeS0wYpMnW48Og"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_p9qjIFTyEeS0wYpMnW48Og" type="DEVS" element="_p9p8EFTyEeS0wYpMnW48Og" name="CreepModel.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_p9qjIVTyEeS0wYpMnW48Og"/>
+  </notation:Diagram>
+</xmi:XMI>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CDPlusPlus_Builder_Version_1.0.0>
+  <Top>
+    <components> hdecision@HDecision &#xd;</components>
+    <out> attackOut&#xd;</out>
+    <in> heroIn&#xd;</in>
+    <in> creepIn&#xd;</in>
+    <Link> heroIn heroIn@hdecision&#xd;</Link>
+    <Link> creepIn creepIn@hdecision&#xd;</Link>
+    <Link> attackOut@hdecision out&#xd;</Link>
+  </Top>
+  <ddecision/>
+</CDPlusPlus_Builder_Version_1.0.0>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http://www.example.org/DEVSModeler" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <CoupledModelType xmi:id="_bRlo2lW5EeSFrc1wyfXRGA" defined="true" sourceFileRelativePath="Battle.ma">
+    <ports xmi:type="CoupledPort" xmi:id="_bRlo21W5EeSFrc1wyfXRGA" portName="resultOut" portType="OUTPUT_PORT" incomingLinks="_bRlpNlW5EeSFrc1wyfXRGA"/>
+    <ports xmi:type="CoupledPort" xmi:id="_bRlo3FW5EeSFrc1wyfXRGA" portName="in" outgoingLinks="_bRlpNVW5EeSFrc1wyfXRGA"/>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_bRlo3VW5EeSFrc1wyfXRGA" instanceName="Hero">
+      <modelType xmi:type="CoupledModelType" xmi:id="_bRlo3lW5EeSFrc1wyfXRGA" modelName="Hero">
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo31W5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_bRlo8FW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpLlW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo4FW5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_bRlo8VW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpLVW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo4VW5EeSFrc1wyfXRGA" portName="resultOut" portType="OUTPUT_PORT" incomingLinks="_bRlo8lW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpNlW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo4lW5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpL1W5EeSFrc1wyfXRGA" outgoingLinks="_bRlo81W5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo41W5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpM1W5EeSFrc1wyfXRGA _bRlpNVW5EeSFrc1wyfXRGA" outgoingLinks="_bRlo9FW5EeSFrc1wyfXRGA"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_bRlo5FW5EeSFrc1wyfXRGA" instanceName="HDecision">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_bRlo5VW5EeSFrc1wyfXRGA" modelName="HDecision" defined="true" sourceFileRelativePath="HDecision.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlo5lW5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlo9FW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlo51W5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlo81W5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlo6FW5EeSFrc1wyfXRGA" portName="attackOut" portType="OUTPUT_PORT" outgoingLinks="_bRlo71W5EeSFrc1wyfXRGA"/>
+          </modelType>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_bRlo6VW5EeSFrc1wyfXRGA" instanceName="HAttack">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_bRlo6lW5EeSFrc1wyfXRGA" modelName="HAttack" defined="true" sourceFileRelativePath="HAttack.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlo61W5EeSFrc1wyfXRGA" portName="in" incomingLinks="_bRlo71W5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlo7FW5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" outgoingLinks="_bRlo8VW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlo7VW5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" outgoingLinks="_bRlo8FW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlo7lW5EeSFrc1wyfXRGA" portName="resultOut" portType="OUTPUT_PORT" outgoingLinks="_bRlo8lW5EeSFrc1wyfXRGA"/>
+          </modelType>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_bRlo71W5EeSFrc1wyfXRGA" target="_bRlo61W5EeSFrc1wyfXRGA" source="_bRlo6FW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlo8FW5EeSFrc1wyfXRGA" target="_bRlo31W5EeSFrc1wyfXRGA" source="_bRlo7VW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlo8VW5EeSFrc1wyfXRGA" target="_bRlo4FW5EeSFrc1wyfXRGA" source="_bRlo7FW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlo8lW5EeSFrc1wyfXRGA" target="_bRlo4VW5EeSFrc1wyfXRGA" source="_bRlo7lW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlo81W5EeSFrc1wyfXRGA" target="_bRlo51W5EeSFrc1wyfXRGA" source="_bRlo4lW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlo9FW5EeSFrc1wyfXRGA" target="_bRlo5lW5EeSFrc1wyfXRGA" source="_bRlo41W5EeSFrc1wyfXRGA"/>
+      </modelType>
+    </coupledModels>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_bRlo9VW5EeSFrc1wyfXRGA" instanceName="EnemyHero">
+      <modelType xmi:type="CoupledModelType" xmi:id="_bRlo9lW5EeSFrc1wyfXRGA" modelName="EnemyHero">
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo91W5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_bRlpCFW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpMFW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo-FW5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_bRlpCVW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpL1W5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo-VW5EeSFrc1wyfXRGA" portName="resultOut" portType="OUTPUT_PORT" incomingLinks="_bRlpClW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo-lW5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpLVW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpC1W5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlo-1W5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpMVW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpDFW5EeSFrc1wyfXRGA"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_bRlo_FW5EeSFrc1wyfXRGA" instanceName="EHDecision">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_bRlo_VW5EeSFrc1wyfXRGA" modelName="HDecision" defined="true" sourceFileRelativePath="HDecision.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlo_lW5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpDFW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlo_1W5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpC1W5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpAFW5EeSFrc1wyfXRGA" portName="attackOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpB1W5EeSFrc1wyfXRGA"/>
+          </modelType>
+        </atomicModels>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_bRlpAVW5EeSFrc1wyfXRGA" instanceName="EHAttack">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_bRlpAlW5EeSFrc1wyfXRGA" modelName="HAttack" defined="true" sourceFileRelativePath="HAttack.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlpA1W5EeSFrc1wyfXRGA" portName="in" incomingLinks="_bRlpB1W5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpBFW5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpCVW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpBVW5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpCFW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpBlW5EeSFrc1wyfXRGA" portName="resultOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpClW5EeSFrc1wyfXRGA"/>
+          </modelType>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpB1W5EeSFrc1wyfXRGA" target="_bRlpA1W5EeSFrc1wyfXRGA" source="_bRlpAFW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpCFW5EeSFrc1wyfXRGA" target="_bRlo91W5EeSFrc1wyfXRGA" source="_bRlpBVW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpCVW5EeSFrc1wyfXRGA" target="_bRlo-FW5EeSFrc1wyfXRGA" source="_bRlpBFW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpClW5EeSFrc1wyfXRGA" target="_bRlo-VW5EeSFrc1wyfXRGA" source="_bRlpBlW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpC1W5EeSFrc1wyfXRGA" target="_bRlo_1W5EeSFrc1wyfXRGA" source="_bRlo-lW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpDFW5EeSFrc1wyfXRGA" target="_bRlo_lW5EeSFrc1wyfXRGA" source="_bRlo-1W5EeSFrc1wyfXRGA"/>
+      </modelType>
+    </coupledModels>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_bRlpDVW5EeSFrc1wyfXRGA" instanceName="Creep">
+      <modelType xmi:type="CoupledModelType" xmi:id="_bRlpDlW5EeSFrc1wyfXRGA" modelName="Creep">
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpD1W5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_bRlpGlW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpMlW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpEFW5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_bRlpGVW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpMVW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpEVW5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpNFW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpG1W5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpElW5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpMFW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpHFW5EeSFrc1wyfXRGA"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_bRlpE1W5EeSFrc1wyfXRGA" instanceName="Creep1">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_bRlpFFW5EeSFrc1wyfXRGA" modelName="CreepModel" defined="true" sourceFileRelativePath="CreepModel.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlpFVW5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpHFW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlpFlW5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpG1W5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpF1W5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpGVW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpGFW5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpGlW5EeSFrc1wyfXRGA"/>
+          </modelType>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpGVW5EeSFrc1wyfXRGA" target="_bRlpEFW5EeSFrc1wyfXRGA" source="_bRlpF1W5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpGlW5EeSFrc1wyfXRGA" target="_bRlpD1W5EeSFrc1wyfXRGA" source="_bRlpGFW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpG1W5EeSFrc1wyfXRGA" target="_bRlpFlW5EeSFrc1wyfXRGA" source="_bRlpEVW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpHFW5EeSFrc1wyfXRGA" target="_bRlpFVW5EeSFrc1wyfXRGA" source="_bRlpElW5EeSFrc1wyfXRGA"/>
+      </modelType>
+    </coupledModels>
+    <coupledModels xmi:type="CoupledModelInstance" xmi:id="_bRlpHVW5EeSFrc1wyfXRGA" instanceName="EnemyCreep">
+      <modelType xmi:type="CoupledModelType" xmi:id="_bRlpHlW5EeSFrc1wyfXRGA" modelName="EnemyCreep">
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpH1W5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" incomingLinks="_bRlpKlW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpNFW5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpIFW5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" incomingLinks="_bRlpKVW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpM1W5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpIVW5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpMlW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpK1W5EeSFrc1wyfXRGA"/>
+        <ports xmi:type="CoupledPort" xmi:id="_bRlpIlW5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpLlW5EeSFrc1wyfXRGA" outgoingLinks="_bRlpLFW5EeSFrc1wyfXRGA"/>
+        <atomicModels xmi:type="AtomicModelInstance" xmi:id="_bRlpI1W5EeSFrc1wyfXRGA" instanceName="Creep2">
+          <modelType xmi:type="CPPAtomicModelType" xmi:id="_bRlpJFW5EeSFrc1wyfXRGA" modelName="CreepModel" defined="true" sourceFileRelativePath="CreepModel.cpp">
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlpJVW5EeSFrc1wyfXRGA" portName="heroIn" incomingLinks="_bRlpLFW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="InputAtomicPort" xmi:id="_bRlpJlW5EeSFrc1wyfXRGA" portName="creepIn" incomingLinks="_bRlpK1W5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpJ1W5EeSFrc1wyfXRGA" portName="heroOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpKVW5EeSFrc1wyfXRGA"/>
+            <ports xmi:type="OutputAtomicPort" xmi:id="_bRlpKFW5EeSFrc1wyfXRGA" portName="creepOut" portType="OUTPUT_PORT" outgoingLinks="_bRlpKlW5EeSFrc1wyfXRGA"/>
+          </modelType>
+        </atomicModels>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpKVW5EeSFrc1wyfXRGA" target="_bRlpIFW5EeSFrc1wyfXRGA" source="_bRlpJ1W5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpKlW5EeSFrc1wyfXRGA" target="_bRlpH1W5EeSFrc1wyfXRGA" source="_bRlpKFW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpK1W5EeSFrc1wyfXRGA" target="_bRlpJlW5EeSFrc1wyfXRGA" source="_bRlpIVW5EeSFrc1wyfXRGA"/>
+        <links xmi:type="CoupledLink" xmi:id="_bRlpLFW5EeSFrc1wyfXRGA" target="_bRlpJVW5EeSFrc1wyfXRGA" source="_bRlpIlW5EeSFrc1wyfXRGA"/>
+      </modelType>
+    </coupledModels>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpLVW5EeSFrc1wyfXRGA" target="_bRlo-lW5EeSFrc1wyfXRGA" source="_bRlo4FW5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpLlW5EeSFrc1wyfXRGA" target="_bRlpIlW5EeSFrc1wyfXRGA" source="_bRlo31W5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpL1W5EeSFrc1wyfXRGA" target="_bRlo4lW5EeSFrc1wyfXRGA" source="_bRlo-FW5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpMFW5EeSFrc1wyfXRGA" target="_bRlpElW5EeSFrc1wyfXRGA" source="_bRlo91W5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpMVW5EeSFrc1wyfXRGA" target="_bRlo-1W5EeSFrc1wyfXRGA" source="_bRlpEFW5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpMlW5EeSFrc1wyfXRGA" target="_bRlpIVW5EeSFrc1wyfXRGA" source="_bRlpD1W5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpM1W5EeSFrc1wyfXRGA" target="_bRlo41W5EeSFrc1wyfXRGA" source="_bRlpIFW5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpNFW5EeSFrc1wyfXRGA" target="_bRlpEVW5EeSFrc1wyfXRGA" source="_bRlpH1W5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpNVW5EeSFrc1wyfXRGA" target="_bRlo41W5EeSFrc1wyfXRGA" source="_bRlo3FW5EeSFrc1wyfXRGA"/>
+    <links xmi:type="CoupledLink" xmi:id="_bRlpNlW5EeSFrc1wyfXRGA" target="_bRlo21W5EeSFrc1wyfXRGA" source="_bRlo4VW5EeSFrc1wyfXRGA"/>
+  </CoupledModelType>
+  <notation:Diagram xmi:id="_bRlpN1W5EeSFrc1wyfXRGA" type="DEVS" element="_bRlo2lW5EeSFrc1wyfXRGA" name="Battle.madesigner" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_bRlpOFW5EeSFrc1wyfXRGA"/>
+  </notation:Diagram>
+</xmi:XMI>

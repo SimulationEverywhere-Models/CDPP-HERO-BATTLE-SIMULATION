@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Models>
+	<Model name="Battle" type="coupled" description="a coupled system for a battle between two heroes and two creeps.">
+		<Inputs>
+			<Port name="in" type="double" description="use for start the battel"/>			
+		</Inputs>
+		<Outputs>
+			<Port name="resultOut" type="double" description="the battle result"/>
+		</Outputs>
+		<Files>	
+			<File name="Battle.ma" type="MA" location="/"/>
+			<File name="Battle.ev" type="EV" location="/"/>
+			<File name="Battle.log" type="LOG" location="/"/>
+		</Files>
+	</Model>
+	<Model name="Hero" type="coupled" description="a coupled hero model,components to decision what to do and how to do">
+		<Inputs>
+			<Port name="heroIn" type="double" description="receives other hero's input"/>	
+			<Port name="creepIn" type="double" description="receives other creep's input"/>	
+		</Inputs>
+		<Outputs>
+			<Port name="heroOut" type="double" description="send message to other hero"/>		
+			<Port name="creepOut" type="double" description="send message to other creep"/>				
+		</Outputs>
+		<Files>
+			<File name="Hero.ma" type="MA" location="/"/>
+			<File name="Hero.ev" type="EV" location="/"/>
+			<File name="Hero.log" type="LOG" location="/"/>
+		</Files>
+	</Model>
+	<Model name="HDecision" type="atomic" description="a decision model in the hero, use for deciding what to do.">
+		<Inputs>
+			<Port name="heroIn" type="double" description="receives other hero's input"/>	
+			<Port name="creepIn" type="double" description="receives other creep's input"/>			
+		</Inputs>
+		<Outputs>
+			<Port name="attackOut" type="double" description="send message to the attack model, tell it what to do"/>
+		</Outputs>
+		<Files>
+			<File name="HDecision.h" type="H" location="/"/>
+			<File name="HDecision.cpp" type="CPP" location="/"/>
+			<File name="HDecision.ma" type="MA" location="/"/>		
+			<File name="HDecision.ev" type="EV" location="/"/>			
+			<File name="HDecision.log" type="LOG" location="/"/>
+		</Files>
+	</Model>
+	<Model name="HAttack" type="atomic" description="a attack model in the hero, use for choosing attack method">
+		<Inputs>
+			<Port name="attackIn" type="double" description="attack decision, decision what to do"/>			
+		</Inputs>
+		<Outputs>
+			
+			<Port name="heroOut" type="double" description="send message to other hero"/>		
+			<Port name="creepOut" type="double" description="send message to other creep"/>	
+		</Outputs>
+		<Files>
+			<File name="HAttack.h" type="H" location="/"/>
+			<File name="HAttack.cpp" type="CPP" location="/"/>
+			<File name="HAttack.ma" type="MA" location="/"/>
+			<File name="HAttack.ev" type="EV" location="/"/>
+			<File name="HAttack.log" type="LOG" location="/"/>
+		</Files>
+	</Model>
+	<Model name="CreepModel" type="atomic" description="the creep model.">
+		<Inputs>
+			<Port name="heroIn" type="double" description="receives other hero's input"/>	
+			<Port name="creepIn" type="double" description="receives other creep's input"/>	
+		</Inputs>
+		<Outputs>
+			<Port name="heroOut" type="double" description="send message to other hero"/>		
+			<Port name="creepOut" type="double" description="send message to other creep"/>	
+		<Files>
+			<File name="CreepModel.h" type="H" location="/"/>
+			<File name="CreepModel.cpp" type="CPP" location="/"/>
+			<File name="CreepModel.ma" type="MA" location="/"/>
+			<File name="CreepModel.ev" type="EV" location="/"/>
+			<File name="CreepModel.log" type="LOG" location="/"/>
+		</Files>
+	</Model>
+</Models>
